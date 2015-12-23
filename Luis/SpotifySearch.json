@@ -1,0 +1,347 @@
+{
+  "luis_schema_version": "1.0.0",
+  "name": "Music",
+  "desc": "",
+  "culture": "en-us",
+  "intents": [
+    "PlayMusic",
+    "None"
+  ],
+  "entities": [
+    "artist",
+    "song"
+  ],
+  "bing_entities": [],
+  "model_features": [],
+  "regex_features": [],
+  "utterances": [
+    {
+      "text": "play the album thriller by michael jackson",
+      "intent": "PlayMusic",
+      "entities": [
+        {
+          "entity": "song",
+          "startPos": 3,
+          "endPos": 3
+        },
+        {
+          "entity": "artist",
+          "startPos": 5,
+          "endPos": 6
+        }
+      ]
+    },
+    {
+      "text": "i want to listen to thriller by michael jackson",
+      "intent": "PlayMusic",
+      "entities": [
+        {
+          "entity": "song",
+          "startPos": 5,
+          "endPos": 5
+        },
+        {
+          "entity": "artist",
+          "startPos": 7,
+          "endPos": 8
+        }
+      ]
+    },
+    {
+      "text": "i want to listen to michael jackson's thriller",
+      "intent": "PlayMusic",
+      "entities": [
+        {
+          "entity": "song",
+          "startPos": 9,
+          "endPos": 9
+        },
+        {
+          "entity": "artist",
+          "startPos": 5,
+          "endPos": 6
+        }
+      ]
+    },
+    {
+      "text": "thriller by michael jackson, play it.",
+      "intent": "PlayMusic",
+      "entities": [
+        {
+          "entity": "song",
+          "startPos": 0,
+          "endPos": 0
+        },
+        {
+          "entity": "artist",
+          "startPos": 2,
+          "endPos": 3
+        }
+      ]
+    },
+    {
+      "text": "play michael jackson's thriller",
+      "intent": "PlayMusic",
+      "entities": [
+        {
+          "entity": "song",
+          "startPos": 5,
+          "endPos": 5
+        },
+        {
+          "entity": "artist",
+          "startPos": 1,
+          "endPos": 2
+        }
+      ]
+    },
+    {
+      "text": "play hello by adele",
+      "intent": "PlayMusic",
+      "entities": [
+        {
+          "entity": "song",
+          "startPos": 1,
+          "endPos": 1
+        },
+        {
+          "entity": "artist",
+          "startPos": 3,
+          "endPos": 3
+        }
+      ]
+    },
+    {
+      "text": "i want to listen to know yourself by drake",
+      "intent": "PlayMusic",
+      "entities": [
+        {
+          "entity": "song",
+          "startPos": 5,
+          "endPos": 6
+        },
+        {
+          "entity": "artist",
+          "startPos": 8,
+          "endPos": 8
+        }
+      ]
+    },
+    {
+      "text": "i want to listen to daft punk's round the world",
+      "intent": "PlayMusic",
+      "entities": [
+        {
+          "entity": "song",
+          "startPos": 9,
+          "endPos": 11
+        },
+        {
+          "entity": "artist",
+          "startPos": 5,
+          "endPos": 6
+        }
+      ]
+    },
+    {
+      "text": "play sorry by justin bieber",
+      "intent": "PlayMusic",
+      "entities": [
+        {
+          "entity": "song",
+          "startPos": 1,
+          "endPos": 1
+        },
+        {
+          "entity": "artist",
+          "startPos": 3,
+          "endPos": 4
+        }
+      ]
+    },
+    {
+      "text": "i want to listen to billie jean by michael jackson",
+      "intent": "PlayMusic",
+      "entities": [
+        {
+          "entity": "song",
+          "startPos": 5,
+          "endPos": 6
+        },
+        {
+          "entity": "artist",
+          "startPos": 8,
+          "endPos": 9
+        }
+      ]
+    },
+    {
+      "text": "hello it's working now",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "hello does this work",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "i want to start listening to thriller by michael jackson",
+      "intent": "PlayMusic",
+      "entities": [
+        {
+          "entity": "song",
+          "startPos": 6,
+          "endPos": 6
+        },
+        {
+          "entity": "artist",
+          "startPos": 8,
+          "endPos": 9
+        }
+      ]
+    },
+    {
+      "text": "hello how are you",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "i want to listen to skillet",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "does this work",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "i want to listen to thriller by michael",
+      "intent": "PlayMusic",
+      "entities": [
+        {
+          "entity": "song",
+          "startPos": 5,
+          "endPos": 5
+        },
+        {
+          "entity": "artist",
+          "startPos": 7,
+          "endPos": 7
+        }
+      ]
+    },
+    {
+      "text": "i want to listen to michael jackson thriller",
+      "intent": "PlayMusic",
+      "entities": []
+    },
+    {
+      "text": "i wanna listen to thriller by michael jackson",
+      "intent": "PlayMusic",
+      "entities": [
+        {
+          "entity": "song",
+          "startPos": 4,
+          "endPos": 4
+        },
+        {
+          "entity": "artist",
+          "startPos": 6,
+          "endPos": 7
+        }
+      ]
+    },
+    {
+      "text": "i want to listen to mike thriller by michael jackson",
+      "intent": "PlayMusic",
+      "entities": [
+        {
+          "entity": "song",
+          "startPos": 6,
+          "endPos": 6
+        },
+        {
+          "entity": "artist",
+          "startPos": 8,
+          "endPos": 9
+        }
+      ]
+    },
+    {
+      "text": "want to listen to thriller by michael jackson",
+      "intent": "PlayMusic",
+      "entities": [
+        {
+          "entity": "song",
+          "startPos": 4,
+          "endPos": 4
+        },
+        {
+          "entity": "artist",
+          "startPos": 6,
+          "endPos": 7
+        }
+      ]
+    },
+    {
+      "text": "i want to listen",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "i want",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "thriller by michael jackson",
+      "intent": "PlayMusic",
+      "entities": [
+        {
+          "entity": "song",
+          "startPos": 0,
+          "endPos": 0
+        },
+        {
+          "entity": "artist",
+          "startPos": 2,
+          "endPos": 3
+        }
+      ]
+    },
+    {
+      "text": "i want to listen to sorry by justin bieber",
+      "intent": "PlayMusic",
+      "entities": [
+        {
+          "entity": "song",
+          "startPos": 5,
+          "endPos": 5
+        },
+        {
+          "entity": "artist",
+          "startPos": 7,
+          "endPos": 8
+        }
+      ]
+    },
+    {
+      "text": "i want to listen to billie jean by michael",
+      "intent": "PlayMusic",
+      "entities": [
+        {
+          "entity": "song",
+          "startPos": 5,
+          "endPos": 6
+        },
+        {
+          "entity": "artist",
+          "startPos": 8,
+          "endPos": 8
+        }
+      ]
+    }
+  ]
+}

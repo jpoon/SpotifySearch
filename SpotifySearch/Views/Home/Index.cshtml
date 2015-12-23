@@ -1,0 +1,130 @@
+﻿@model SpotifySearch.Models.RecoModel
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    <h1>SpotifySearch</h1>
+    <p class="lead">Using natural language commands, play music from Spotify. Powered by Project Oxford.</p>
+    <p><a href="http://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
+</div>
+
+<div class="row">
+    <div class="col-md-4">
+        <h2>1. Start <i class="fa fa-microphone"></i></h2>
+        <p>Start a session by clicking below.</p>
+        <p>Try something like <i>"I want to listen to Thriller by Michael Jackson".</i>
+        </p>
+        @using (Html.BeginForm("StartReco", "Home", FormMethod.Post, new {@class = "form-horizontal", role = "form", id = "startRecoForm"}))
+        {
+            <input type="submit" id="startRecoButton" class="btn btn-default" value="Listen" onclick="handleForm();"/>
+        }
+
+    </div>
+    <div class="col-md-4">
+        <h2>2. Intent <i class="fa fa-rocket"></i></h2>
+        <p>Using Project Oxford and LUIS, speech is translated to an intent and entities.</p>
+        @if (Model != null)
+        {
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th>Query</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>@Model.Intent.Query</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th>Intent</th>
+                        <th>Score</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    @foreach (var intent in Model.Intent.Intents)
+                    { 
+                        <tr>
+                            <td>@intent.Intent</td>
+                            <td>@intent.Score</td>
+                        </tr>
+                    }
+                </tbody>                
+            </table>
+
+
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th>Entity</th>
+                        <th>Type</th>
+                        <th>Score</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    @foreach (var entity in Model.Intent.Entities)
+                    {
+                        <tr>
+                            <td>@entity.Entity</td>
+                            <td>@entity.Type</td>
+                            <td>@entity.Score</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        }
+    </div>
+    <div class="col-md-4">
+        <h2>3. Spotify <i class="fa fa-spotify"></i></h2>
+
+
+        @if (Model != null)
+        {
+            <p>Looks like you want to listen to...</p>
+            using (Html.BeginForm("PlaySpotify", "Home", FormMethod.Post, new {@class = "form-horizontal", role = "form", id = "playSpotify"}))
+            {
+                <p>Artist: @Html.TextBoxFor(x => x.Artist, new Dictionary<string, object>() {{"disabled", "true"}})</p>
+                <p>Song: @Html.TextBoxFor(x => x.Song, new Dictionary<string, object>() {{"disabled", "true"}}) </p>
+
+                if (Model.SpotifyLink == null)
+                {
+                    <input type="submit" id="playSpotifyButton" class="btn btn-default" value="Find" onclick="handleSpotifyForm();"/>
+                }
+            }
+
+            if (Model.SpotifyLink != null)
+            {
+                <br/>
+                <audio controls>
+                    <source src="@Model.SpotifyLink" type="audio/mp3"/>
+                    <p>Your browser does not support HTML 5 audio element</p>
+                </audio>
+            }
+        }
+    </div>
+</div>
+
+@section scripts
+{
+    <script type="text/javascript">
+        function handleForm() {
+            $('#startRecoButton').attr("disabled", true);
+            $('#startRecoButton').attr("value", "Listening...");
+            $('#startRecoForm').submit();
+        }
+
+        function handleSpotifyForm() {
+            $('#playSpotifyButton').attr("disabled", true);
+            $('#playSpotifyButton').attr("value", "Searching...");
+            $('#playSpotify').submit();
+        }
+    </script>
+}
