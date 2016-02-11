@@ -1,6 +1,6 @@
 {
   "luis_schema_version": "1.0.0",
-  "name": "Music",
+  "name": "SpotifySearch",
   "desc": "",
   "culture": "en-us",
   "intents": [
@@ -340,6 +340,107 @@
           "entity": "artist",
           "startPos": 8,
           "endPos": 8
+        }
+      ]
+    },
+    {
+      "text": "i want to listen to hello by adele",
+      "intent": "PlayMusic",
+      "entities": [
+        {
+          "entity": "song",
+          "startPos": 5,
+          "endPos": 5
+        },
+        {
+          "entity": "artist",
+          "startPos": 7,
+          "endPos": 7
+        }
+      ]
+    },
+    {
+      "text": "want to listen to justin bieber's sorry",
+      "intent": "PlayMusic",
+      "entities": [
+        {
+          "entity": "song",
+          "startPos": 8,
+          "endPos": 8
+        },
+        {
+          "entity": "artist",
+          "startPos": 4,
+          "endPos": 5
+        }
+      ]
+    },
+    {
+      "text": "2 adele",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "play play hello by adele",
+      "intent": "None",
+      "entities": [
+        {
+          "entity": "song",
+          "startPos": 2,
+          "endPos": 2
+        },
+        {
+          "entity": "artist",
+          "startPos": 4,
+          "endPos": 4
+        }
+      ]
+    },
+    {
+      "text": "i want to listen to adele hello",
+      "intent": "PlayMusic",
+      "entities": [
+        {
+          "entity": "song",
+          "startPos": 6,
+          "endPos": 6
+        },
+        {
+          "entity": "artist",
+          "startPos": 5,
+          "endPos": 5
+        }
+      ]
+    },
+    {
+      "text": "play beat it by michael jackson",
+      "intent": "PlayMusic",
+      "entities": [
+        {
+          "entity": "song",
+          "startPos": 1,
+          "endPos": 2
+        },
+        {
+          "entity": "artist",
+          "startPos": 4,
+          "endPos": 5
+        }
+      ]
+    },
+    {
+      "text": "i want to listen to what do you mean by justin bieber",
+      "intent": "PlayMusic",
+      "entities": [
+        {
+          "entity": "song",
+          "startPos": 5,
+          "endPos": 8
+        },
+        {
+          "entity": "artist",
+          "startPos": 10,
+          "endPos": 11
         }
       ]
     }
