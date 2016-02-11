@@ -9,7 +9,7 @@ Use natural language commands to play music from Spotify. A sample application p
 ## Installation/Setup
 
 1. Fork and clone the repo
-2. Deploy an instance of the [Project Oxford Speech APIs](https://www.projectoxford.ai/Subscription)
+2. Create a [Project Oxford Speech APIs subscription](https://www.projectoxford.ai/Account/Login?callbackUrl=/Subscription/Index?productId=/products/54f0354049c3f70a50e79b7e). You can manage your Oxford subscriptions [here](https://www.projectoxford.ai/Subscription); the main dashboard shows the primary and secondary keys that will be needed in the SDKs.
 3. Create a [Project LUIS application](https://www.luis.ai/) and import [this model](https://github.com/jpoon/SpotifySearch/blob/master/Luis/SpotifySearch.json)
 4. Update the web.config of the `SpotifySearch` project with your own keys obtained through steps 2 and 3 above.
     ```
