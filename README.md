@@ -9,16 +9,17 @@ Use natural language commands to play music from Spotify. A sample application p
 ## Installation/Setup
 
 1. Fork and clone the repo
-2. Create a [Project Oxford Speech APIs subscription](https://www.projectoxford.ai/Account/Login?callbackUrl=/Subscription/Index?productId=/products/54f0354049c3f70a50e79b7e). You can manage your Oxford subscriptions [here](https://www.projectoxford.ai/Subscription); the main dashboard shows the primary and secondary keys that will be needed in the SDKs.
-3. Create a [Project LUIS application](https://www.luis.ai/) and import [this model](https://github.com/jpoon/SpotifySearch/blob/master/Luis/SpotifySearch.json)
+2. Create a subscription for [Project Oxford Speech APIs](https://www.projectoxford.ai/Account/Login?callbackUrl=/Subscription/Index?productId=/products/54f0354049c3f70a50e79b7e). The [main dashboard](https://www.projectoxford.ai/Subscription) will show the primary key that will be needed to configure the `SpotifySearch` application.
+3. Login to [Project LUIS](https://www.luis.ai/) and **import an existing application** using the following [this](https://github.com/jpoon/SpotifySearch/blob/master/Luis/SpotifySearch.json). Once imported, train the model, and publish the web service. The web service URL will look like this: `https://api.projectoxford.ai/luis/v1/application?id=[LUIS-APP-ID]&subscription-key=[LUIS-SUBSCRIPTION-ID]&q=`. The `[LUIS-APP-ID]` and `[LUIS-SUBSCRIPTION-ID]` will be used to configure the `SpotifySearch` application.
 4. Update the web.config of the `SpotifySearch` project with your own keys obtained through steps 2 and 3 above.
+
     ```
     <add key="luisAppId" value="" />
     <add key="luisSubscriptionId" value=""/>
     <add key="oxfordSpeechSubscriptionId" value=""/>
     ```
 
-5. Run and say some commands like: "I want to listen to Ellie Goulding's Lights".
+5. Run and say some commands/utterances like: "I want to listen to Ellie Goulding's Lights".
 
 ## How
 
