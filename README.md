@@ -23,7 +23,7 @@ Use natural language commands to play music from Spotify. A sample application p
 
 ## How
 
-All is explained in the case study [here](http://catalystcode.github.io/case-studies/2015/12/16/Speech-Intent-with-Project-Luis.html).
+All is explained in the case study [here](https://www.microsoft.com/developerblog/real-life-code/2015/12/16/Speech-Intent-with-Project-Luis.html).
 
 ## License
 
